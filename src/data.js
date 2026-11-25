@@ -18,12 +18,28 @@ import webProject from './assets/images/web.jpg'
 import aluProject from './assets/images/alu.jpg'
 import unioProject from './assets/images/unio.jpg'
 
+export const contacts = [
+  { icon: FaEnvelope, label: 'Email', href: 'mailto:malinaomarychris@gmail.com' },
+  { icon: FaPhone, label: 'Phone', href: 'tel:+639928226730' },
+  {
+    icon: FaFacebookF,
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/19D2mj1A2J/',
+  },
+  {
+    icon: FaInstagram,
+    label: 'Instagram',
+    href: 'https://www.instagram.com/kokonutmptree?igsh=MWYxcm54cjdyamZreQ==',
+  },
+  { icon: FaGithub, label: 'GitHub', href: 'https://github.com/marychris02' },
+]
+
 export const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'My Work', href: '#work' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Connect', href: '#contact', dropdown: true },
 ]
 
 export const hobbies = [
@@ -136,36 +152,6 @@ export const projects = [
   },
 ]
 
-export const contacts = [
-  { icon: FaEnvelope, label: 'Email', href: 'mailto:malinaomarychris@gmail.com' },
-  { icon: FaPhone, label: 'Phone', href: 'tel:+639928226730' },
-  {
-    icon: FaFacebookF,
-    label: 'Facebook',
-    href: 'https://www.facebook.com/share/19D2mj1A2J/',
-  },
-  {
-    icon: FaInstagram,
-    label: 'Instagram',
-    href: 'https://www.instagram.com/kokonutmptree?igsh=MWYxcm54cjdyamZreQ==',
-  },
-  { icon: FaGithub, label: 'GitHub', href: 'https://github.com/marychris02' },
-]
-
-export const socials = [
-  { icon: FaPhone, label: '+639928226730', href: 'tel:+639928226730' },
-  { icon: FaEnvelope, label: 'Email', href: 'mailto:malinaomarychris@gmail.com' },
-  {
-    icon: FaFacebookF,
-    label: 'Facebook',
-    href: 'https://www.facebook.com/share/19D2mj1A2J/',
-  },
-  {
-    icon: FaInstagram,
-    label: 'Instagram',
-    href: 'https://www.instagram.com/kokonutmptree?igsh=MWYxcm54cjdyamZreQ==',
-  },
-  { icon: FaGithub, label: 'GitHub', href: 'https://github.com/marychris02' },
-]
+export const socials = contacts
 
 export { profilePic }

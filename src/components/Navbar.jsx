@@ -1,5 +1,16 @@
 import { useState } from 'react'
-import { navLinks } from '../data.js'
+import Dropdown from './Dropdown.jsx'
+import { contacts, navLinks } from '../data.js'
+
+const connectItems = [
+  ...contacts.map(({ icon, label, href }) => ({
+    icon,
+    label,
+    href,
+    external: href.startsWith('http'),
+  })),
+  { label: 'All contact options', href: '#contact', separated: true },
+]
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,11 +29,20 @@ function Navbar() {
       <div className="nav-brand">PORTFOLIO</div>
 
       <nav className={`nav-links${isOpen ? ' active' : ''}`}>
-        {navLinks.map(({ label, href }) => (
-          <a key={href} href={href} onClick={closeMenu}>
-            {label}
-          </a>
-        ))}
+        {navLinks.map(({ label, href, dropdown }) =>
+          dropdown ? (
+            <Dropdown
+              key={href}
+              label={label}
+              items={connectItems}
+              onNavigate={closeMenu}
+            />
+          ) : (
+            <a key={href} href={href} onClick={closeMenu}>
+              {label}
+            </a>
+          ),
+        )}
       </nav>
 
       <div
