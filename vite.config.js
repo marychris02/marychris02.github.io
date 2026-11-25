@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  // Matches https://marychris02.github.io/MyPortfolio/
-  base: '/MyPortfolio/',
+  // User site at https://marychris02.github.io/
+  base: '/',
   plugins: [react()],
 })
