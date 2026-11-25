@@ -854,3 +854,9 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Disabled project button */
+.btn-secondary.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
